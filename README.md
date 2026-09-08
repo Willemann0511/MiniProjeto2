@@ -22,7 +22,7 @@ Na Indústria 4.0, a automação do controle de qualidade em linhas de produçã
 
 O projeto foi desenvolvido seguindo boas práticas de versionamento com Git, utilizando *feature branches* dedicadas para cada Sprint do desenvolvimento.
 
-```text
+text
 ├── dataset/                     # Diretório com o dataset Casting Product
 │   ├── def_front/               # Peças metálicas com defeito
 │   └── ok_front/                # Peças metálicas sem defeito (OK)
@@ -34,6 +34,8 @@ O projeto foi desenvolvido seguindo boas práticas de versionamento com Git, uti
 ├── .gitignore
 ├── README.md                    # Relatório de apresentação do projeto
 └── requirements.txt             # Dependências e bibliotecas do ambiente
+
+
 
 🔬 3. Análise Exploratória Clássica (OpenCV)Antes da etapa de aprendizado profundo, aplicamos uma sequência de pré-processamento clássico sobre uma amostra com defeito para compreender a assinatura física das falhas estruturais.Pipeline de Filtros Aplicados:Grayscale: Conversão da imagem de RGB para escala de cinza para reduzir a dimensionalidade de canais mantendo as variações de intensidade luminosa.Gaussian Blur: Aplicação de filtro gaussiano $5 \times 5$ para suavização de ruído de alta frequência e pequenos artefatos do ambiente industrial.Limiarização Otsu (Thresholding): Binarização automática da imagem para separar a peça metálica e os defeitos do fundo.Detecção de Bordas (Canny): Aplicação do algoritmo de Canny para realçar e isolar as descontinuidades e rachaduras na superfície da peça.Operações Morfológicas: Combinação de Dilatação e Erosão para conectar contornos fraturados e evidenciar visualmente a extensão da ranhura.O pipeline clássico provou ser essencial para confirmar que os defeitos possuem bordas bem definidas e padrões de iluminação distintos em relação às peças íntegras.
 
